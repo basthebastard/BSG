@@ -5,7 +5,7 @@
         <div id="header">
 
           <div id="logo">
-            <a href="#"><img id="logo" src="Images/bear-archery-products-logo.gif" alt="Bearshotgun" /></a>
+            <a href="#"><%= image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun") %></a>
           </div>
             <ul id="nav">
               <li><a class="upper" href="#">News</a></li>
@@ -36,21 +36,16 @@
 	  <div id="social_header">
 
 
-            <a href="#"><img id="fb" src="Images/facebook.jpg" 
-		onmouseover="this.src='Images/facebookhover.jpg'"
-		onmouseout="this.src='Images/facebook.jpg'" alt="FB" /></a>
-            <a href="#"><img id="twitter" src="Images/twitter.jpg"
-		onmouseover="this.src='Images/twitterhover.jpg'"
-		onmouseout="this.src='Images/twitter.jpg'" alt="T" /></a>
-            <a href="#"><img id="yt" src="Images/youtube.jpg"
-		onmouseover="this.src='Images/youtubehover.jpg'"
-		onmouseout="this.src='Images/youtube.jpg'" alt="YT" /></a>
-	    <a href="#"><img id="rss" src="Images/rss.jpg"
-		onmouseover="this.src='Images/rsshover.jpg'"
-		onmouseout="this.src='Images/rss.jpg'" alt="RSS" /></a>
-	    <a href="#"><img id="mail" src="Images/mail.jpg"
-		onmouseover="this.src='Images/mailhover.jpg'"
-		onmouseout="this.src='Images/mail.jpg'" alt="mail" /></a>
+            <a href="#"><%= image_tag("facebook.jpg", 
+            	id:"fb", alt:"Facebook", :mouseover => "facebookhover.jpg") %></a>
+            <a href="#"><%= image_tag("twitter.jpg", 
+            	id:"twitter", alt:"Twitter", :mouseover => "twitterhover.jpg") %></a>
+            <a href="#"><%= image_tag("youtube.jpg", 
+            	id:"yt", alt:"Youtube", :mouseover => "youtubehover.jpg") %></a>
+	    	<a href="#"><%= image_tag("rss.jpg", 
+            	id:"rss", alt:"RSS", :mouseover => "rsshover.jpg") %></a>
+	    	<a href="#"><%= image_tag("mail.jpg", 
+            	id:"mail", alt:"Email", :mouseover => "mailhover.jpg") %></a>
  
 	    <form method="get" action="http://www.google.com/search">
 	     <div id="searchbox">
@@ -74,7 +69,7 @@
 
       <div id="body_container">
 	<div id="play_zolf_box">
-	  <img id="play_zolf" src="Images/Something something Zolf.png" alt="Play A Game of Zolf today!" />
+	  <%= image_tag "Something something Zolf.png", id:"play_zolf", alt:"Play A Game of Zolf today!" %>
         </div> 
 
 	<div id="body_box">
@@ -89,7 +84,7 @@
 
 	  <div id="column2">
 	    <div id="headline"><h2>Buy Zolf</h2></div>
-	    <a href="#"><img id="buypic" src="Images/Lebowski Picture.jpg" alt="Buy Zolf" /></a>
+	    <a href="#"><%= image_tag "Lebowski Picture.jpg",  id:"buypic", alt:"Buy Zolf" %></a>
 	  </div>
 	</div>
 	
@@ -195,5 +190,5 @@
     </div>  
     </div>
     <div class="background_wrapper">
-       <a href="#"><img class="background" src="Images/AB_SPACE_Utopia2_banner_2000x511_FieryPlanet.jpg" /></a>
+       <a href="#"><%= image_tag "AB_SPACE_Utopia2_banner_2000x511_FieryPlanet.jpg", class: "background", alt: "BigBanner" %></a>
     </div> 
