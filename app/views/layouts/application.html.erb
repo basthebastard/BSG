@@ -4,14 +4,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title><%= yield(:title) %></title>
+  <title>Bearshotgun!</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <script language="JavaScript" type="text/javascript">
+    pic1= new Image(); 
+    pic1.src="/assets/bear-archery-products-logo.gif";
+    pic2= new Image(); 
+    pic2.src="/assets/logo3.jpg";
+    pic3= new Image(); 
+    pic3.src="/assets/Misfortuneicon.png";
+    pic4= new Image(); 
+    pic4.src="/assets/logo2.jpg";  
+   </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class = "container">
+		<%= yield %>
+	</div>
+<!--  <%= render 'layouts/footer' %> -->
+<%= javascript_include_tag "application" %>
 </body>
 </html>

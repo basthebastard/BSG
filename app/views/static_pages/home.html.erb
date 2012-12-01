@@ -1,174 +1,64 @@
-<% provide(:title, 'Bearshotgun!') %>
-                   
-    <div id="header_container">
-      <div id="wrapper">
-        <div id="header">
+<!-- <div class="background_wrapper">
+    <a href="#"><%= image_tag "AB_SPACE_Utopia2_banner_2000x511_FieryPlanet.jpg", class: "background", alt: "BigBanner" %></a>
+</div> -->
 
-          <div id="logo">
-            <a href="#"><%= image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun") %></a>
-          </div>
-            <ul id="nav">
-              <li><a class="upper" href="#">News</a></li>
-              <li><a class="upper" href="#">About us</a>
-<!--		<ul><div id="navtriangle"></div><div id="navbox">
-		  <li class="lower_left"><a class="lower" href="#">Company Info</a></li>
-		  <li><a class ="lower" href="#">Press Kit</a></li></div>
-		</ul> -->
-	      </li>
-              <li><a class="upper" href="#">Our Work</a>
-<!--		<ul><div id="navtriangle"></div><div id="navbox">
-		  <li class="lower_left"><a class="lower" href="#">A Game of Zolf</a></li>
-		  <li><a class="lower" href="#">Other</a></li></div>
-		</ul> -->
-	      </li>
-              <li><a class="upper" href="#">Contact</a></li>
-            </ul>
+<%= render 'layouts/header' %>
 
-	  <div id="social_headertop">
-<!--	    <div id="welcome_social_header">
-	      <p><em>This is <strong>Bearshotgun</strong>! We are the creators of <strong>A Game of Zolf</strong>!</em></p>
-	    </div> -->
-	    <div id="follow_social_header"><p><em>Follow us on social media:</em></p></div>
-	  </div>
-	  <div id="social_header_round"></div>
-	  <div id="social_header_round2"></div>		
-	  <div id="social_headerbottom"></div>  
-	  <div id="social_header">
+<div id= "wrapper">
+	<div id= "body_container">
+<!--		<div style="margin-top:-240px;">
+	  		<img src="/assets/Rovio_subpagebanner_6.jpg" alt:"Welcome to Bearshotgun!" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: 980px; height: 240px;" />
+	  	</div> -->
 
-
-            <a href="#"><%= image_tag("facebook.jpg", 
-            	id:"fb", alt:"Facebook", :mouseover => "facebookhover.jpg") %></a>
-            <a href="#"><%= image_tag("twitter.jpg", 
-            	id:"twitter", alt:"Twitter", :mouseover => "twitterhover.jpg") %></a>
-            <a href="#"><%= image_tag("youtube.jpg", 
-            	id:"yt", alt:"Youtube", :mouseover => "youtubehover.jpg") %></a>
-	    	<a href="#"><%= image_tag("rss.jpg", 
-            	id:"rss", alt:"RSS", :mouseover => "rsshover.jpg") %></a>
-	    	<a href="#"><%= image_tag("mail.jpg", 
-            	id:"mail", alt:"Email", :mouseover => "mailhover.jpg") %></a>
- 
-	    <form method="get" action="http://www.google.com/search">
-	     <div id="searchbox">
-		<table>
-		    <tr>
-		      <input id="searchbar" type="text" name="sitesearch" size="21" maxlength="255" value="" />
-		      <input id="searchclick" type="submit" value="Search bearshotgun.com" />
-<!--		      <input id="searchicon" type="image" src="Images/search.png" alt="Search" /> -->
-		    </tr>
-		</table>
-	      </div>
-	    </form>
-                                    
-          </div>
-
-        </div>
-      </div> 
-    </div>  
-
-    <div id= "wrapper">
-
-      <div id="body_container">
-	<div id="play_zolf_box">
-	  <%= image_tag "Something something Zolf.png", id:"play_zolf", alt:"Play A Game of Zolf today!" %>
+		<div id= "play_zolf_box">
+	  		<%= image_tag "welcome.png", id:"play_zolf", alt:"Welcome to Bearshotgun!" %>
         </div> 
 
-	<div id="body_box">
+	  <div id= "body_box">
 
-	  <div id="column1">
-	    <div id="headline"><h2>News</h2></div>
-	    <div id="newsbox"><a href="#"><div id="newsheadline"><span style="font-size: 12pt;">The Big Lebowski</span></div></a>"Dude" Lebowski, 
-		mistaken for a millionaire Lebowski, seeks restitution for his ruined rug 
-		and enlists his bowling buddies to help get it. <a href="#">Read more...</a>
-	    </div>
- 	  </div>
+	  	<div id= "column1">
+	    	<div id="headline"><h2>News</h2></div>
+	    	<div id="newsbox"><a href="#"><div id="newsheadline"><span style="font-size: 12pt;">The Big Lebowski</span></div></a>"Dude" Lebowski, 
+			mistaken for a millionaire Lebowski, seeks restitution for his ruined rug 
+			and enlists his bowling buddies to help get it. <a href="#">Read more...</a>
+	    	</div>
+ 	  	</div>
 
-	  <div id="column2">
-	    <div id="headline"><h2>Buy Zolf</h2></div>
-	    <a href="#"><%= image_tag "Lebowski Picture.jpg",  id:"buypic", alt:"Buy Zolf" %></a>
+	  	<div id="column2">
+	    	<div id="headline"><h2>Store</h2></div>
+
+	    	<a href="#" onmouseover="document.Zolf.src = '/assets/logo3.jpg';" onmouseout="document.Zolf.src = '/assets/logo2.jpg';"><img name="Zolf" class="buypic" src="/assets/logo2.jpg" alt="Buy Zolf" style="border-radius: 25px;"></a>
+	    	<img class="buypic" src="/assets/Misfortuneicon.png" alt="Buy Zolf">
+			<div class = "button" onclick="PreviousSlide()" style="position: absolute; margin: 110px 0px 0px 5px;"><</div>
+			<div class = "button" onclick="NextSlide()" style="position: absolute; margin: 110px 0px 0px 259px;">></div>
+
+	  	</div>
 	  </div>
-	</div>
 	
-	<div id="body_l"></div>
-	<div id="body_r"></div>
+	  <div id="body_l"></div>
+	  <div id="body_r"></div>
 
 
-	<div id="body_box2">
+	  <div id="body_box2">
 
-	  <div id="phonebox">
+	  	<div id="phonebox">
 
-	    <div id="headlinetrailer"><h2>Zolf Trailer</h2></div>
-
-            <div id="phone">
+	    <div id="headlinetrailer"><h2>Video</h2></div>
+        <div id="phone">
 	      <div id="trailer">
-              <iframe width="500" height="300" src="http://www.youtube.com/embed/8BdT5mFAk-Y" frameborder="0" allowfullscreen></iframe>
-              <div id="phonebutton"><div id="phonebutton_thingy"></div></div>
-            </div>   
-          </div>
-	</div>
-	<div id="body_bottom_l"></div>
-	<div id="body_bottom_r"></div>
-	</div>
+             <iframe width="500" height="300" src="http://www.youtube.com/embed/8BdT5mFAk-Y" frameborder="0" allowfullscreen></iframe>
+             <div id="phonebutton"><div id="phonebutton_thingy"></div></div>
+          </div>   
+        </div>
 
-	<div id="bottom_box">
-	  <div id="column_footer_1">
-	    <div class="footer_text_box">
-	      <ul class="footer_list">
-		<li><span style="color: #000000; text-transform: uppercase; font-size: 10pt;">Bearshotgun Games</span>
-		  <ul class="footer_list_nested">
-		    <li>Address</li>
-		    <li>London, Postcode</li>
-		    <li>United Kingdom</li>
-		  </ul> 
-		</li>
-	      </ul>
-            </div>
+	  	</div>
+
 	  </div>
-	  <div id="column_footer_2">
-	    <div class="footer_text_box">
-	      <ul class="footer_list">
-		<li><a href="#"><span style="text-transform: uppercase; font-size: 10pt;">News</span></a>
-		  <ul class="footer_list_nested">
-		    <li><a href="#">Blog</a></li>
-		    <li><a href="#">Follow us on Twitter</a></li>
-		  </ul>
-		</li>
-	      </ul>
-            </div>
-	  </div>
-	  <div id="column_footer_3">
-	    <div class="footer_text_box">
-	      <ul class="footer_list">
-		<li><a href="#"><span style="text-transform: uppercase; font-size: 10pt;">About Us</span></a>
-		  <ul class="footer_list_nested">
-		    <li><a href="#">Company Info</a></li>
-		    <li><a href="#">Press Kit</a></li>
-		  </ul>
-		</li>
-	      </ul>
-            </div>
-	  </div>
-	  <div id="column_footer_4">
-	    <div class="footer_text_box">
-	      <ul class="footer_list">
-		<li><a href="#"><span style="text-transform: uppercase; font-size: 10pt;">Our Work</span></a>
-		  <ul class="footer_list_nested">
-		    <li><a href="#">A Game of Zolf</a></li>
-		    <li><a href="#">Other</a></li>
-		  </ul>
-		</li>
-	      </ul>
-            </div>
-	  </div>
-	  <div id="column_footer_5">
-	    <div class="footer_text_box">
-	      <ul class="footer_list">
-		<li><a href="#"><span style="text-transform: uppercase; font-size: 10pt;">Contact</span></a>
-		</li>
-	      </ul>
-            </div>
-	  </div>
-	  
-	</div>
+
+	  <div id="body_bottom_l"></div>
+	  <div id="body_bottom_r"></div>
+
+	  <%= render 'layouts/bottombox' %>
 
 
 <!--        <div id="twitter_container_triangle">
@@ -184,11 +74,8 @@
             </script>
           </div> 
         </div> -->  
-      </div> 
-	<div id="footer">&copy;2012 Bearshotgun Software Ltd. A Game of Zolf.</div>
-
-    </div>  
-    </div>
-    <div class="background_wrapper">
-       <a href="#"><%= image_tag "AB_SPACE_Utopia2_banner_2000x511_FieryPlanet.jpg", class: "background", alt: "BigBanner" %></a>
     </div> 
+  </div> 
+</div> 
+	  <%= render 'layouts/footer' %>
+

@@ -1,7 +1,9 @@
 BSG::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
+  #get "static_pages/home"
 
-  get "static_pages/about"
+  #get "static_pages/about"
+  match '/about/company-info', to: 'static_pages#about_company_info'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
