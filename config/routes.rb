@@ -5,6 +5,12 @@ BSG::Application.routes.draw do
   #get "static_pages/about"
   match '/about/company-info', to: 'static_pages#about_company_info'
 
+  match '/our-work/a-game-of-zolf', to: 'static_pages#our_work_a_game_of_zolf'
+
+  match '/our-work/misfortune-cookie-box', to: 'static_pages#our_work_misfortune_cookie_box'
+
+  match '/our-work/app-development', to: 'static_pages#our_work_app_development'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
