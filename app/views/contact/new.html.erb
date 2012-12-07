@@ -1,0 +1,78 @@
+<div id="header_container">
+     <div id="wrapper">
+        <div id="header">
+
+          <div id="logo">
+            <%= link_to image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun"), '/' %>
+          </div>
+            <ul id="nav">
+              <li><a class="upper" href="#">News</a></li>
+              <li><a class="upper" href="/our-work/a-game-of-zolf">Our Work</a>
+            </li>
+              <li><a class="upper" href="/about/company-info">About us</a>
+            </li>
+              <li><a class="upper" href="#"><span style="color: #DA5252;">Contact</span></a></li>
+            </ul>
+
+<%= render 'layouts/subpageheader' %>
+
+<div id="wrapper">
+  <div id="body_container" style="height: 765px;">
+    <div style="margin-top:-240px;">
+      <img src="/assets/Rovio_subpagebanner_6.jpg" alt:"Welcome to Bearshotgun!" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: 980px; height: 240px;" />
+    </div>
+    <div id="subpagepicbox" style="width: 185px;">
+    </div>
+    <img id="subpagepic" src="/assets/Contact Us.png" alt:"Contact Us" />
+    <div id="body_top_l">
+    </div>
+    <div id="body_top_r" style="margin-left:270px; width: 710px;">
+    </div>
+    <div id="body_box2" style="height: 580px;">
+      <div id="subpagecontentbox" style="height: 625px;">
+<!--        <%= image_tag("bear-archery-products-logo.gif", id:"contact_pic", alt:"Bearshotgun") %> -->
+        <p><span style="font-size: 15pt; letter-spacing: -2px;">THANKS FOR STOPPING BY!</span></p>
+        <p id="subpagetextbox">Here's where you can get in touch with us.</p>
+        <p id="subpagetextbox">Please get in touch with us by filling in the form below. We'll get back to you as soon as possible.<p>
+
+          <%= render 'layouts/notice_div' %>
+
+        <%= form_for @message, :url => contact_path do |form| %>
+        <table id="contact_table">
+          <tr>
+            <th id="contact_description"><%= form.label :firstname, "First Name" %> <span style="color: red;">*</span></th>
+            <td id="contact_field1"><%= form.text_field :firstname %></td>
+          </tr>
+          <tr>
+            <th id="contact_description"><%= form.label :lastname, "Last Name" %> <span style="color: red;">*</span></th>
+            <td id="contact_field1"><%= form.text_field :lastname %></td>
+          </tr>
+          <tr>
+            <th id="contact_description"><%= form.label :email, "E-mail" %> <span style="color: red;">*</span></th>
+            <td id="contact_field1"><%= form.text_field :email %></td>
+          </tr>
+          <tr>
+            <th id="contact_description" style="position: absolute; margin-top: 15px;"><%= form.label :company %></th>
+            <td id="contact_field1"><%= form.text_field :company %></td>
+          </tr>
+          <tr>
+            <th id="contact_description"><%= form.label :phone %></th>
+            <td id="contact_field1"><%= form.text_field :phone %></td>
+          </tr>
+          <tr>
+            <th id="contact_description" style="position: absolute; margin-top: 25px;"><%= form.label :body, "Your message" %> <span style="color: red;">*</span></th>
+            <td id="contact_field1"><%= form.text_area :body, :rows => 5, :cols => 0 %></td>
+          </tr>
+        </table>
+        <div id="submit">
+          <%= form.submit "Submit", class: "redbutton" %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+    <div id="body_bottom_l"></div>
+    <div id="body_bottom_r"></div>
+    <%= render 'layouts/bottombox' %>
+  </div>
+</div>
+<%= render 'layouts/footer' %>

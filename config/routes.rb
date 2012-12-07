@@ -2,7 +2,6 @@ BSG::Application.routes.draw do
   root to: 'static_pages#home'
   #get "static_pages/home"
 
-  #get "static_pages/about"
   match '/about/company-info', to: 'static_pages#about_company_info'
 
   match '/our-work/a-game-of-zolf', to: 'static_pages#our_work_a_game_of_zolf'
@@ -10,6 +9,11 @@ BSG::Application.routes.draw do
   match '/our-work/misfortune-cookie-box', to: 'static_pages#our_work_misfortune_cookie_box'
 
   match '/our-work/app-development', to: 'static_pages#our_work_app_development'
+
+  match '/contact-success', to: 'static_pages#contact_success'
+
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

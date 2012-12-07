@@ -843,6 +843,102 @@ li.lower_left {
   font-size: 10pt;
 }
 
+#contact_table {
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 10pt;
+}
+
+#contact_description {
+  text-align: left;
+  width: 235px;
+  padding-top: 5px;
+}
+
+#contact_field1 {
+  text-align: left;
+  padding-top: 5px;
+}
+
+#message_firstname {
+  padding: 3px;
+  width: 178px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#message_lastname {
+  padding: 3px;
+  width: 178px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#message_email {
+  padding: 3px;
+  width: 178px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#message_company {
+  padding: 3px;
+  margin-top: 15px;
+  width: 178px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#message_phone {
+  padding: 3px;
+  width: 178px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#message_body {
+  position: relative;
+  margin-top: 25px;
+  padding: 3px;
+  width: 515px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+#submit {
+  position: relative;
+  margin: 15px 0px 0px 235px;
+}
+
+.redbutton {
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 1px outset #DA5252;
+  color: #ffffff;
+  font-size: 10pt;
+  background-color: #DA5252;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -moz-linear-gradient(top, #FCCCCC 0%, #DA5252 50%, #D51212 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FCCCCC), color-stop(50%,#DA5252), color-stop(100%,#9A2929));
+  background: -webkit-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -o-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -ms-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FCCCCC', endColorstr='#9A2929',GradientType=0 );
+}
+
+#notice {
+  position: relative;
+  margin: 15px 0px;
+  padding: 10px 0px;
+  width: 470px;
+  font-size: 10pt;
+  text-align: center;
+  border: 3px groove #DA5252;
+  color: #DA5252;
+  font-weight: bold;
+}
+
 #subpagepicbox {
   position: relative;
   margin-left: 85px;
@@ -868,6 +964,15 @@ li.lower_left {
   border-radius: 25px;
   float: left; 
   margin: 0px 25px 25px 0px;
+}
+
+#contact_pic {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  float: left; 
+  margin: 25px 0px 0px 525px;
 }
 
 #body_top_l {
