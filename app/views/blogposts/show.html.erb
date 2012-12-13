@@ -1,0 +1,22 @@
+<p id="noticemkay"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @blogpost.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= dat_markdown @blogpost.content %>
+</p>
+
+<p>
+  <b>Posted at:</b>
+  <%= @blogpost.created_at.strftime("%d %b. %Y %H:%M") %>
+</p>
+
+
+<%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
+<%= link_to 'Back', blogposts_path %>
+
+<%= debug params %>

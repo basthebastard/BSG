@@ -1,0 +1,23 @@
+<h1>Listing blogposts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @blogposts.each do |blogpost| %>
+  <tr>
+    <td><%= link_to blogpost.title, blogpost %></td>
+    <td><%= dat_markdown sentence_truncate(blogpost.content, :sentences => 1) %></td>
+    <td><%= blogpost.created_at.strftime("%d %b. %Y %H:%M") %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Blogpost', new_blogpost_path %>

@@ -1,4 +1,8 @@
-BSG::Application.routes.draw do
+BSG::Application.routes.draw do 
+
+  resources :blogposts
+
+
   root to: 'static_pages#home'
   #get "static_pages/home"
 
@@ -12,8 +16,20 @@ BSG::Application.routes.draw do
 
   match '/contact-success', to: 'static_pages#contact_success'
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  match 'contact', to: 'contact#new', :as => 'contact', :via => :get
+  match 'contact', to: 'contact#create', :as => 'contact', :via => :post
+
+  match '/blog', to: 'blogposts#index'
+
+  match '/blog-admin', to: 'blogposts#admin_index'
+
+  #match 'blogposts/:id', to: 'blogposts#show'
+
+  match 'archive', to: 'archives#index'
+
+  match  'archive/:year(/:month(/:day))' => 'archives#monthly_index', :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }
+
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

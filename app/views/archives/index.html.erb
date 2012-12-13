@@ -1,0 +1,19 @@
+<div class="archives">
+    <h2>Blog Archive</h2>
+
+    <% @blogpost_by_day.sort.reverse.each do |day, blogposts| %>
+    <h3><%= day.strftime("%d %B %Y") %></h3>
+    <table>
+      <% for blogpost in blogposts %>
+        <tr>
+        	<td><%= link_to blogpost.title, blogpost_path(blogpost) %></td>
+        	<td><%= dat_markdown sentence_truncate(blogpost.content, :sentences => 1) %></td>
+        	<td><%= blogpost.created_at.strftime("%d %b. %Y %H:%M") %></td>
+      <% end %>
+    </table>
+    <% end %>
+
+<pre>
+  <%= @blogpost_by_day.inspect %>
+</pre>
+</div>

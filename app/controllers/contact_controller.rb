@@ -11,8 +11,9 @@ class ContactController < ApplicationController
       NotificationsMailer.new_message(@message).deliver
       redirect_to '/contact-success'
     else
-      flash[:notice]= "Please fill in all required(*) fields."
-      redirect_to '/contact'
+#      flash[:notice]= "Please fill in all required(*) fields."
+#      redirect_to '/contact'
+    render action: "new" 
     end
   end
 

@@ -32,35 +32,43 @@
       <div id="subpagecontentbox" style="height: 625px;">
 <!--        <%= image_tag("bear-archery-products-logo.gif", id:"contact_pic", alt:"Bearshotgun") %> -->
         <p><span style="font-size: 15pt; letter-spacing: -2px;">THANKS FOR STOPPING BY!</span></p>
-        <p id="subpagetextbox">Here's where you can get in touch with us.</p>
-        <p id="subpagetextbox">Please get in touch with us by filling in the form below. We'll get back to you as soon as possible.<p>
-
-          <%= render 'layouts/notice_div' %>
+        <p id="subpagetextbox">This is where you can get in touch with us.</p>
+        <p id="subpagetextbox">Please fill in the form below, and we'll get back to you as soon as we humanly possible, by any means necessary.<p>
 
         <%= form_for @message, :url => contact_path do |form| %>
+        <% if @message.errors.any? %>
+          <div id="error_explanation">
+            <p style="margin-top:-8px; font-weight: bold"><%= pluralize(@message.errors.count, "error") %> prohibited this message from being sent:</p>
+            <ul id="error_list">
+              <% @message.errors.each do |attr, msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
         <table id="contact_table">
           <tr>
-            <th id="contact_description"><%= form.label :firstname, "First Name" %> <span style="color: red;">*</span></th>
+            <th id="contact_description"><%= form.label :firstname, "First Name" %> </th>
             <td id="contact_field1"><%= form.text_field :firstname %></td>
           </tr>
           <tr>
-            <th id="contact_description"><%= form.label :lastname, "Last Name" %> <span style="color: red;">*</span></th>
+            <th id="contact_description"><%= form.label :lastname, "Last Name" %> </th>
             <td id="contact_field1"><%= form.text_field :lastname %></td>
           </tr>
           <tr>
-            <th id="contact_description"><%= form.label :email, "E-mail" %> <span style="color: red;">*</span></th>
+            <th id="contact_description"><%= form.label :email, "E-mail" %> </th>
             <td id="contact_field1"><%= form.text_field :email %></td>
           </tr>
           <tr>
-            <th id="contact_description" style="position: absolute; margin-top: 15px;"><%= form.label :company %></th>
+            <th id="contact_description" style="position: absolute; margin-top: 15px;"><%= form.label :company %><span style="font-weight: lighter;"> (optional)</span></th>
             <td id="contact_field1"><%= form.text_field :company %></td>
           </tr>
           <tr>
-            <th id="contact_description"><%= form.label :phone %></th>
+            <th id="contact_description"><%= form.label :phone %><span style="font-weight: lighter;"> (optional)</span></th>
             <td id="contact_field1"><%= form.text_field :phone %></td>
           </tr>
           <tr>
-            <th id="contact_description" style="position: absolute; margin-top: 25px;"><%= form.label :body, "Your message" %> <span style="color: red;">*</span></th>
+            <th id="contact_description" style="position: absolute; margin-top: 25px;"><%= form.label :body, "Your Message" %> </th>
             <td id="contact_field1"><%= form.text_area :body, :rows => 5, :cols => 0 %></td>
           </tr>
         </table>

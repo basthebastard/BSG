@@ -1,0 +1,18 @@
+
+<div>
+
+   <% @blogpost_array.sort.reverse.each do |blogpost| %>
+   <h3><%= link_to blogpost.title, blogpost %></h3>
+   <p><%= dat_markdown sentence_truncate(blogpost.content, :sentences => 1) %></p>
+   <% end%>
+
+<!--   <p><%= @blogposts_by_day %></p>
+   <p><%= @blogposts_sunday %></p>
+   <p><%= @blogpost_array %></p>
+   <p><%= @year %></p>
+   <p><%= @month %></p>
+   <p><%= @day %></p>
+   <p><%= @date %></p> -->
+ </div>
+
+<%= debug params %>
