@@ -25,8 +25,6 @@ BSG::Application.routes.draw do
 
   #match 'blogposts/:id', to: 'blogposts#show'
 
-  match 'archive', to: 'archives#index'
-
   match  'archive/:year(/:month(/:day))' => 'archives#monthly_index', :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }
 
  

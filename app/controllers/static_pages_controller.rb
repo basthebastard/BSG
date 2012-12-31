@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @latestpost = Blogpost.order("created_at").last
   end
 
   def about_company_info

@@ -1,3 +1,4 @@
+<% provide(:title, 'Contact Us') %>
 <div id="header_container">
      <div id="wrapper">
         <div id="header">
@@ -6,7 +7,7 @@
             <%= link_to image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun"), '/' %>
           </div>
             <ul id="nav">
-              <li><a class="upper" href="#">News</a></li>
+              <li><a class="upper" href="/blog">News</a></li>
               <li><a class="upper" href="/our-work/a-game-of-zolf">Our Work</a>
             </li>
               <li><a class="upper" href="/about/company-info">About us</a>
@@ -33,7 +34,7 @@
 <!--        <%= image_tag("bear-archery-products-logo.gif", id:"contact_pic", alt:"Bearshotgun") %> -->
         <p><span style="font-size: 15pt; letter-spacing: -2px;">THANKS FOR STOPPING BY!</span></p>
         <p id="subpagetextbox">This is where you can get in touch with us.</p>
-        <p id="subpagetextbox">Please fill in the form below, and we'll get back to you as soon as we humanly possible, by any means necessary.<p>
+        <p id="subpagetextbox">Please fill in the form below, and we'll get back to you as soon as humanly possible, by any means necessary.<p>
 
         <%= form_for @message, :url => contact_path do |form| %>
         <% if @message.errors.any? %>
@@ -73,7 +74,7 @@
           </tr>
         </table>
         <div id="submit">
-          <%= form.submit "Submit", class: "redbutton" %>
+          <%= form.submit "Submit", class: "contactbutton" %>
         <% end %>
       </div>
       </div>

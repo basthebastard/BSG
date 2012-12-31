@@ -1,18 +1,77 @@
+<% provide(:title, 'Archive') %>
+<div id="header_container">
+     <div id="wrapper">
+        <div id="header">
 
-<div>
+          <div id="logo">
+            <%= link_to image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun"), '/' %>
+          </div>
+            <ul id="nav">
+              <li><a class="upper" href="/blog"><span style="color: #DA5252;">News</span></a></li>
+              <li><a class="upper" href="/our-work/a-game-of-zolf">Our Work</a>
+            </li>
+              <li><a class="upper" href="/about/company-info">About us</a>
+            </li>
+              <li><a class="upper" href="/contact">Contact</a></li>
+            </ul>
 
-   <% @blogpost_array.sort.reverse.each do |blogpost| %>
-   <h3><%= link_to blogpost.title, blogpost %></h3>
-   <p><%= dat_markdown sentence_truncate(blogpost.content, :sentences => 1) %></p>
-   <% end%>
+<%= render 'layouts/subpageheader' %>
 
-<!--   <p><%= @blogposts_by_day %></p>
-   <p><%= @blogposts_sunday %></p>
-   <p><%= @blogpost_array %></p>
-   <p><%= @year %></p>
-   <p><%= @month %></p>
-   <p><%= @day %></p>
-   <p><%= @date %></p> -->
- </div>
+<div id= "wrapper">
+  <div id= "body_container" style="height: auto; float: left;">
+    <div style="margin-top:-240px;">
+      <img src="/assets/Rovio_subpagebanner_6.jpg" alt:"Welcome to Bearshotgun!" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: 980px; height: 240px;" />
+    </div>
+    <div id="subpagepicbox" style="margin-left: 140px; width: 103px;">
+    </div>
+    <img id="subpagepic" style="margin-left: 140px;" src="/assets/News.png" alt:"News" /> 
 
-<%= debug params %>
+    <div>
+      <div id="container-outer">
+        <div id="container-inner">
+
+        <div id="blog_archive">
+          <div id="archive_box">
+            <% @blogpost_by_month.sort.reverse.each do |date, blogposts| %>
+            <p class="blog_year" name="year"><%= date.strftime("%Y") %></p>
+            <table class="blog_month">
+              <tr>
+                <td><%= link_to date.strftime("%B"), ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
+              </tr>
+            </table>
+            <% end %>
+          </div> 
+        </div>
+
+        <div id="blog_posts">
+          <% @blogpost_array.sort.reverse.each do |blogpost| %>
+          <p class="blog_title"><%= link_to blogpost.title, blogpost %></p>
+          <p class="blog_date"><%= blogpost.created_at.strftime("%d %b. %Y") %></p>
+          <div class="blog_content"><%= dat_markdown sentence_truncate(blogpost.content, :sentences => 1) %></div>
+          <div class="redbutton"><%= link_to 'Read more', blogpost %>
+          </div>
+          <% end%>
+          <%= will_paginate @blogpost_array, :inner_window => 2, :outer_window => -1, :renderer => PaginationHelper::LinkRenderer %>
+          <div>
+            <script type="text/javascript">
+              var currentURL = window.location.pathname;
+              var aURL = currentURL.split("/",4);
+              var year = aURL[2]
+              var month = aURL[3]
+              document.write (year)
+            </script>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+<!--      <div id="blog_right">    
+      </div> -->
+
+    <%= render 'layouts/bottombox' %> 
+ 
+  </div>
+  <%= render 'layouts/blogfooter' %>
+</div>

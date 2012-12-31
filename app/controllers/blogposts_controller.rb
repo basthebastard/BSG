@@ -5,7 +5,8 @@ class BlogpostsController < ApplicationController
   # GET /blogposts
   # GET /blogposts.json
   def index
-    @blogposts = Blogpost.all(:order => "created_at DESC")
+    @blogposts = Blogpost.paginate(page: params[:page], :per_page => 5, :order => "created_at DESC")
+    @blogpost_by_month = Blogpost.find(:all, :order => "created_at DESC").group_by { |post| post.created_at.beginning_of_month }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,6 +27,8 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1.json
   def show
     @blogpost = Blogpost.find(params[:id])
+    @blogpost_by_month = Blogpost.find(:all, :order => "created_at DESC").group_by { |post| post.created_at.beginning_of_month }
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blogpost }

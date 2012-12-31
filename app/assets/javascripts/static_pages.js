@@ -2,8 +2,6 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-	    	
-
 var numslides=0,currentslide=0;
 var slides = new Array();
 
@@ -11,6 +9,7 @@ function MakeSlideShow() {
   	imgs=document.getElementsByTagName("img");
     for (i=0; i<imgs.length; i++) {
     	if (imgs[i].className != "buypic") continue;
+
     	slides[numslides]=imgs[i];
     	if (numslides==0) {
       		imgs[i].style.visibility="visible";
@@ -41,4 +40,4 @@ function PreviousSlide() {
 
 window.onload=MakeSlideShow;
 
-			
+var currentURL = window.location.pathname		

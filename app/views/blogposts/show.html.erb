@@ -1,22 +1,67 @@
-<p id="noticemkay"><%= notice %></p>
+<% provide(:title, 'News') %>
+<div id="header_container">
+     <div id="wrapper">
+        <div id="header">
 
-<p>
-  <b>Title:</b>
-  <%= @blogpost.title %>
-</p>
+          <div id="logo">
+            <%= link_to image_tag("bear-archery-products-logo.gif", id:"logo", alt:"Bearshotgun"), '/' %>
+          </div>
+            <ul id="nav">
+              <li><a class="upper" href="/blog"><span style="color: #DA5252;">News</span></a></li>
+              <li><a class="upper" href="/our-work/a-game-of-zolf">Our Work</a>
+            </li>
+              <li><a class="upper" href="/about/company-info">About us</a>
+            </li>
+              <li><a class="upper" href="/contact">Contact</a></li>
+            </ul>
 
-<p>
-  <b>Content:</b>
-  <%= dat_markdown @blogpost.content %>
-</p>
+<%= render 'layouts/subpageheader' %>
 
-<p>
-  <b>Posted at:</b>
-  <%= @blogpost.created_at.strftime("%d %b. %Y %H:%M") %>
-</p>
+<div id= "wrapper">
+  <div id= "body_container" style="height: auto; float: left;">
+    <div style="margin-top:-240px;">
+      <img src="/assets/Rovio_subpagebanner_6.jpg" alt:"Welcome to Bearshotgun!" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: 980px; height: 240px;" />
+    </div>
+    <div id="subpagepicbox" style="margin-left: 140px; width: 103px;">
+    </div>
+    <img id="subpagepic" style="margin-left: 140px;" src="/assets/News.png" alt:"News" /> 
 
+    <div>
+      <div id="container-outer">
+        <div id="container-inner">
 
-<%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
-<%= link_to 'Back', blogposts_path %>
+        <div id="blog_archive">
+          <div id="archive_box">
+            <% @blogpost_by_month.sort.reverse.each do |date, blogposts| %>
+            <p class="blog_year"><%= date.strftime("%Y") %></p>
+            <table class="blog_month">
+              <tr>
+                <td><%= link_to date.strftime("%B"), ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
+              </tr>
+            </table>
+            <% end %>
+          </div> 
+        </div>
 
-<%= debug params %>
+        <div id="blog_posts">
+
+          <p class="blog_title"><%= @blogpost.title %></p>
+          <p class="blog_date"><%= @blogpost.created_at.strftime("%d %b. %Y") %></p>
+          <div class="blog_content" style="margin-top: 15px;"><%= @blogpost.content %>
+          </div>
+          <div class="redbutton" style="width: 16%; margin-top: 25px; margin-bottom: 25px;"><%= link_to 'Back to list', blog_path %>
+          </div>
+        </div>   
+
+        </div>
+      </div>
+    </div>
+
+<!--    <div id="blog_right">    
+    </div>  -->
+
+    <%= render 'layouts/bottombox' %> 
+
+  </div>
+  <%= render 'layouts/blogfooter' %>
+</div>

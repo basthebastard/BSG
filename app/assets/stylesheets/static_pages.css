@@ -19,6 +19,10 @@ p {
   margin-top: 15px;
 }
 
+div#preload { 
+  display: none; 
+}
+
 div.background_wrapper{
   position: absolute;
   overflow: hidden;
@@ -209,25 +213,10 @@ li.lower_left {
   border-radius: 10px;
 }
 
-#nav li a.upper:link {
+#nav li a.upper:link, #nav li a.upper:visited  {
   text-decoration: none;
   color: #D8D8D8;
   padding: 20px 20px 18px 20px;
-}
-#nav li a.upper:visited { 
-  text-decoration: none;
-  color: #DA5252;
-  padding: 20px 20px 18px 20px;
-/*  background: #EFEFFB; 
-  background: -moz-linear-gradient(top, #ffffff 0%, #49476E 47%, #000000 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#EFEFFB), color-stop(100%,#A9BCF5)); 
-  background: -webkit-linear-gradient(top, #ffffff 0%,#EFEFFB 47%,#A9BCF5 100%); 
-  background: -o-linear-gradient(top, #ffffff 0%,#EFEFFB 47%,#A9BCF5 100%); 
-  background: -ms-linear-gradient(top, #ffffff 0%,#EFEFFB 47%,#A9BCF5 100%); 
-  background: linear-gradient(to bottom, #ffffff 0%,#EFEFFB 47%,#A9BCF5 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#A9BCF5',GradientType=0 );
-  border-bottom: 3px solid #DA5252; */
-  outline: none; 
 }
 
 #nav li a.upper:hover {
@@ -347,7 +336,7 @@ li.lower_left {
 }
 
 #follow_social_header {
-  position: absolute;
+  position: relative;
   overflow: visible;
   width: 230px;
   height: 10pt;
@@ -768,13 +757,13 @@ li.lower_left {
 }
 
 .button {
-  width: 32px; 
-  height: 32px;
+  width: 20px; 
+  height: 20px;
   border-radius: 35px;
-  padding: 7px;
+  padding: 5px 5px 8px 7px;
   text-align: center;
   color: black;
-  font-size: 18pt;
+  font-size: 13pt;
   font-weight: bold;
   cursor: pointer;
   background-color: #585858;
@@ -784,13 +773,13 @@ li.lower_left {
 }
 
 .button:hover {
-  width: 32px; 
-  height: 32px;
+  width: 20px; 
+  height: 20px;
   border-radius: 35px;
-  padding: 7px;
+  padding: 5px 5px 8px 7px;
   text-align: center;
   color: #DA5252;
-  font-size: 18pt;
+  font-size: 13pt;
   font-weight: bold;
   cursor: pointer;
   background-color: black;
@@ -802,17 +791,17 @@ li.lower_left {
 #newsbox {
   width: 220px;
   height: 300px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-left: 50px;
   font-size: 10pt;
 }
 
-#newsbox a:link {
+#newsheadline a:link {
   text-decoration: none;
   color: #DA5252;
 }
 
-#newsbox a:hover {
+#newsheadline a:hover {
   text-decoration: underline;
   color: #DA5252;
 }  
@@ -914,7 +903,7 @@ li.lower_left {
   margin: 15px 0px 0px 235px;
 }
 
-.redbutton {
+.contactbutton {
   padding: 5px 15px;
   border-radius: 15px;
   border: 1px outset #DA5252;
@@ -930,6 +919,32 @@ li.lower_left {
   background: -ms-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FCCCCC', endColorstr='#9A2929',GradientType=0 );
 }
+
+.redbutton {
+/*  margin:auto; */
+  margin-left: 325px;
+  margin-top: 10px;
+  width:15%;
+  padding: 5px 15px 5px 16px;
+  border-radius: 15px;
+  border: 1px outset #DA5252;
+  font-size: 10pt;
+  background-color: #DA5252;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -moz-linear-gradient(top, #FCCCCC 0%, #DA5252 50%, #D51212 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FCCCCC), color-stop(50%,#DA5252), color-stop(100%,#9A2929));
+  background: -webkit-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -o-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  background: -ms-linear-gradient(top, #FCCCCC 0%,#DA5252 50%,#9A2929 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FCCCCC', endColorstr='#9A2929',GradientType=0 );
+}
+
+.redbutton a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 /*
 #notice {
   position: relative;
@@ -1095,7 +1110,7 @@ li.lower_left {
 
 .footer_list {
   list-style-type: none;
-  font-size: 9pt;
+  font-size: 8pt;
   color: #848484;
 }
 
@@ -1103,10 +1118,10 @@ li.lower_left {
   list-style-position: inside;
   list-style-type: none;
   line-height: 12pt;
-  margin: 10px 0px 0px 15px;
+  margin: 5px 0px 0px 15px;
 }
 
-.footer_list a:link {
+.footer_list a:link, .footer_list a:visited {
   text-decoration: none;
   color: #000000;
 }
@@ -1116,7 +1131,7 @@ li.lower_left {
   color: #DA5252;
 }
 
-.footer_list_nested a:link {
+.footer_list_nested a:link, .footer_list_nested a:visited {
   text-decoration: none;
   color: #848484;
 }
@@ -1166,4 +1181,182 @@ li.lower_left {
 
 #error_list {
   list-style: none;
+}
+
+.pagination, .pagination ul {
+  list-style: none;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 25px;
+}
+
+.pagination > li {
+  float: left;
+  margin-top: 70px;
+}
+
+.pagination li {
+  font-size: 10pt;
+  letter-spacing: -1px;
+  padding: 5px;
+  background-color: #E6E6E6;
+  background: linear-gradient(to bottom, #E6E6E6 0%,#FFFFFF 50%,#E6E6E6 100%);
+  background: -moz-linear-gradient(top, #E6E6E6 0%, #FFFFFF 50%, #E6E6E6 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E6E6E6), color-stop(50%,#FFFFFF), color-stop(100%,#E6E6E6));
+  background: -webkit-linear-gradient(top, #E6E6E6 0%,#FFFFFF 50%,#E6E6E6 100%);
+  background: -o-linear-gradient(top, #E6E6E6 0%,#FFFFFF 50%,#E6E6E6 100%);
+  background: -ms-linear-gradient(top, #E6E6E6 0%,#FFFFFF 50%,#E6E6E6 100%);
+/*  display: inline-block; */
+  box-shadow: 1px 2px 1px #6E6E6E;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; 
+}
+
+.pagination ul li {
+  display: inline;
+}
+
+.pagination a, .pagination span {
+  padding: 0.2em 0.3em; 
+}
+
+.pagination .disabled {
+  cursor: default;
+  color: #aaaaaa;
+}
+
+.pagination .active {
+  color: white;
+  background-color: #585858;
+  background: linear-gradient(to bottom, #585858 0%,#585858 50%,#585858 100%);
+  background: -moz-linear-gradient(top, #585858 0%, #000000 50%, #585858 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F2F2), color-stop(50%,#FFFFFF), color-stop(100%,#F2F2F2));
+  background: -webkit-linear-gradient(top, #F2F2F2 0%,#FFFFFF 50%,#F2F2F2 100%);
+  background: -o-linear-gradient(top, #F2F2F2 0%,#FFFFFF 50%,#F2F2F2 100%);
+  background: -ms-linear-gradient(top, #585858 0%,#000000 50%,#585858 100%);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; 
+}
+
+.pagination a:link {
+  text-decoration: none;
+  color: #424242; 
+}
+
+.pagination .active a:link {
+  text-decoration: none;
+  color: white; 
+}
+
+#container-outer {
+  float:left;
+  overflow: hidden;
+  margin-top: -3px;
+}
+
+#container-inner {
+  float:left;
+  position: relative;
+  right: 470px;
+  background-color: #F2F2F2;
+  border-bottom-right-radius: 25px;
+}
+
+#blog_archive {
+  position: relative;
+  float: left;
+  width: 243px;
+  left: 470px;
+}
+
+#archive_box {
+  margin: 35px 15px 0px 25px;
+  font-size: 10pt;
+  line-height: 150%;
+}
+
+#blog_posts {
+  position: relative;
+  float: left;
+  width: 470px;
+  left: 470px; 
+}
+
+#blog_right {
+  float: left;
+  margin-top: -3px;
+  width: 263px; 
+  height: 1000px; 
+  border: 1px solid black;
+}
+
+.blog_year {
+  font-size: 11pt; 
+  font-weight: bold;
+}
+
+.blog_month {
+  margin-top: 4px;
+  font-size: 11pt;
+}
+
+.blog_month a:link {
+  text-decoration: none;
+  color: #9A2929;
+}
+
+.blog_month a:visited, .blog_month a:hover, .blog_month a:focus, .blog_month a:active {
+  text-decoration: underline;
+  color: #9A2929;
+}
+
+.blog_month a.highlite {
+  color:white;
+}
+
+.blog_amount { 
+  width: 300px;
+  font-size: 10pt;
+  text-align: right;
+}
+
+.blog_amount a:link {
+  color: #848484;  
+}
+
+.blog_title {
+  font-size: 17pt; 
+  letter-spacing: -2px; 
+  text-transform: uppercase;
+  margin-left: 25px;
+  margin-top: 35px;
+}
+
+.blog_title a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog_title a:hover, .blog_title a:focus {
+  text-decoration: underline; 
+}
+
+.blog_date {
+  margin-top: 2px;
+  margin-left: 25px;
+  font-size: 10pt; 
+  letter-spacing: -1px; 
+}
+
+.blog_content {
+  font-size: 10pt; 
+  margin-left: 25px;
+  margin-right: 20px;
 }

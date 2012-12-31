@@ -1,6 +1,7 @@
 module ApplicationHelper
 end
 
+#to embed images or video, just include the html such as <img... /> or <iframe...> Include the right class name for img or video.
 def dat_markdown(text)
   options = {
     :autolink => true,
