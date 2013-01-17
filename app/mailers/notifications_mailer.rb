@@ -1,4 +1,4 @@
-class NotificationsMailer < ActionMailer::Base
+class NotificationsMailer < ActionMailer::Base #contact form mailer settings
 
   default :from => "basthebastard@bearshotgun.com"
   default :to => "basthebastard@bearshotgun.com"

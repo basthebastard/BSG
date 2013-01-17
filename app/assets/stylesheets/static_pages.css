@@ -6,7 +6,11 @@
   border: 0px;
 } 
 
-  html, body {
+html{
+    overflow: scroll;
+}
+
+html, body {
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -77,10 +81,11 @@ img.background {
 
 #subnav, #subnav ul {
   list-style: none;
-  margin-left: 535px;
+  margin-left: 33%;
 }
 
 #subnav {
+  width: 980px;
   float: left;
 }
 
@@ -120,7 +125,7 @@ img.background {
   background: linear-gradient(to top, #585858 0%,#424242 77%,#000000 100%);
 }
 
-#nonactive a:link {
+#nonactive a:link, #nonactive a:visited {
   text-decoration: none;
   color: #BDBDBD;
   cursor: pointer;
@@ -796,7 +801,7 @@ li.lower_left {
   font-size: 10pt;
 }
 
-#newsheadline a:link {
+#newsheadline a:link , #newshearline a:visited {
   text-decoration: none;
   color: #DA5252;
 }
@@ -1302,23 +1307,38 @@ li.lower_left {
   font-weight: bold;
 }
 
-.blog_month {
+.blog_month{
+  text-decoration: none;
   margin-top: 4px;
   font-size: 11pt;
-}
-
-.blog_month a:link {
-  text-decoration: none;
   color: #9A2929;
 }
 
-.blog_month a:visited, .blog_month a:hover, .blog_month a:focus, .blog_month a:active {
+.blog_month:hover {
   text-decoration: underline;
   color: #9A2929;
 }
 
-.blog_month a.highlite {
-  color:white;
+.blog_month_active{
+  text-decoration: none;
+  margin-top: 4px;
+  font-size: 11pt;
+  color: #9A2929;
+  margin-left: -28px;
+  padding-left: 28px;
+  width: 160px;
+  background-color: #585858;
+  background: linear-gradient(to right, #585858 0%,#A4A4A4 15%,#F2F2F2 100%);
+  background: -moz-linear-gradient(left, #585858 0%, #A4A4A4 15%, #F2F2F2 100%); 
+  background: -webkit-gradient(linear, left, right, color-stop(0%,#585858), color-stop(15%,#A4A4A4), color-stop(100%,#F2F2F2));
+  background: -webkit-linear-gradient(left, #585858 0%,#A4A4A4 15%,#F2F2F2 100%);
+  background: -o-linear-gradient(left, #585858 0%,#A4A4A4 15%,#F2F2F2 100%);
+  background: -ms-linear-gradient(left, #585858 0%,#A4A4A4 15%,#F2F2F2 100%);
+}
+
+.blog_month_active:hover {
+  text-decoration: underline;
+  color: #9A2929;
 }
 
 .blog_amount { 
@@ -1327,7 +1347,8 @@ li.lower_left {
   text-align: right;
 }
 
-.blog_amount a:link {
+.blog_amount a:link, .blog_amount a:visited {
+  text-decoration: none;
   color: #848484;  
 }
 
@@ -1359,4 +1380,9 @@ li.lower_left {
   font-size: 10pt; 
   margin-left: 25px;
   margin-right: 20px;
+}
+
+.blog_embed {
+  margin: 15px;
+  text-align: center;
 }

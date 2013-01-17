@@ -1,8 +1,8 @@
 module ApplicationHelper
 end
 
-#to embed images or video, just include the html such as <img... /> or <iframe...> Include the right class name for img or video.
-def dat_markdown(text)
+
+def dat_markdown(text) #keeps formatting
   options = {
     :autolink => true,
     :space_after_headers => true,
@@ -12,7 +12,7 @@ def dat_markdown(text)
   markdown.render(text).html_safe
 end
 
-def sentence_truncate(s, options = {})
+def sentence_truncate(s, options = {}) #display x amount of sentences
 	options.reverse_merge!({:words => 0})
     if options[:sentences]
       return s.split(/\.(\s|$)+/)[0, options[:sentences]].map{|s| s.strip}.join('. ') + '.'

@@ -1,4 +1,4 @@
-module PaginationHelper
+module PaginationHelper #custom pagination
     class LinkRenderer < WillPaginate::ActionView::LinkRenderer
         
     protected

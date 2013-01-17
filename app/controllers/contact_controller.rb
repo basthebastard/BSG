@@ -4,7 +4,7 @@ class ContactController < ApplicationController
     @message = Message.new
   end
 
-  def create
+  def create #check contact form
     @message = Message.new(params[:message])
     
     if @message.valid?

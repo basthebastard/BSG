@@ -1,6 +1,13 @@
-<h1>Listing blogposts</h1>
+<% provide(:title, 'Edit blog') %>
+<h1>Edit blog</h1>
+<p>When adding a new blogpost or editing an existing one, here's what you have to do:</p>
+<p>Just paste or write your text. Don't worry about HTML, except when adding an image or a video. In that case, wrap it in a div with a class of "blog_embed", and specify your desired width and height. For example:</p>
+<p>&lt;div class="blog_embed"&gt;</br>
+  &lt;img width="250" height="300" src="blah.jpg" alt="Blah" /&gt;</br>
+  &lt;/div&gt;</p>
+<p><%= link_to 'Create a new Blogpost', new_blogpost_path %></p>
 
-<table>
+<table style="margin-top: 15px;">
   <tr>
     <th>Title</th>
     <th>Content</th>
@@ -20,6 +27,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Blogpost', new_blogpost_path %>

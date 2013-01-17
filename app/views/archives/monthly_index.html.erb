@@ -33,10 +33,11 @@
         <div id="blog_archive">
           <div id="archive_box">
             <% @blogpost_by_month.sort.reverse.each do |date, blogposts| %>
-            <p class="blog_year" name="year"><%= date.strftime("%Y") %></p>
-            <table class="blog_month">
+            <p class="blog_year"><%= date.strftime("%Y") %></p>
+            
+            <table>
               <tr>
-                <td><%= link_to date.strftime("%B"), ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
+                <td><a style="text-decoration: none; outline: none;" href="<%= ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %>"><p class="blog_month"><%= date.strftime("%B") %></p></a></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
               </tr>
             </table>
             <% end %>
@@ -52,17 +53,7 @@
           </div>
           <% end%>
           <%= will_paginate @blogpost_array, :inner_window => 2, :outer_window => -1, :renderer => PaginationHelper::LinkRenderer %>
-          <div>
-            <script type="text/javascript">
-              var currentURL = window.location.pathname;
-              var aURL = currentURL.split("/",4);
-              var year = aURL[2]
-              var month = aURL[3]
-              document.write (year)
-            </script>
           </div>
-        </div>
-
         </div>
       </div>
     </div>

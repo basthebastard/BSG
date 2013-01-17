@@ -34,9 +34,9 @@
           <div id="archive_box"> 
             <% @blogpost_by_month.sort.reverse.each do |date, blogposts| %>
             <p class="blog_year"><%= date.strftime("%Y") %></p>
-            <table class="blog_month">
+            <table>
               <tr>
-                <td><%= link_to date.strftime("%B"), ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
+                <td><a class="blog_month" href="<%= ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %>"><%= date.strftime("%B") %></td><td class="blog_amount"><%= link_to [("("),blogposts.count,(")")].join, ["/archive/",date.strftime("%Y"),"/",date.strftime("%m")].join %></td>
               </tr>
             </table>
             <% end %>
