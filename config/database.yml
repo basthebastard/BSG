@@ -30,10 +30,10 @@ production:
 
   adapter: mysql
   encoding: utf8
-#  reconnect: false
+  reconnect: false
+  pool: 5
   database: ebdb
-#  pool: 5
   username: ebroot
   password: bearsrul3
-  hostname: http://bsg-env-i3rg4bqvqh.elasticbeanstalk.com/
+  hostname: aa1p6lx1z56j7od.cxrviy7ysoot.eu-west-1.rds.amazonaws.com
   port: 3306
