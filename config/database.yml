@@ -31,9 +31,9 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
+  database: BSG_production
   pool: 5
-  database: ebdb
-  username: ebroot
-  password: bearsrul3
-  hostname: aa1p6lx1z56j7od.cxrviy7ysoot.eu-west-1.rds.amazonaws.com
-  port: 3306
+  username: root
+  password: sigabi86
+#  hostname:
+#  port: 3306

@@ -20,11 +20,4 @@ ActiveRecord::Schema.define(:version => 20121208125204) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "blogs", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
 end

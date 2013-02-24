@@ -276,15 +276,15 @@ li.lower_left {
         -moz-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -moz-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -moz-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
-        -moz-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
+        -moz-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -o-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -o-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -o-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
-         -o-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
+         -o-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -webkit-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -webkit-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
          -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
-         -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
+         -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px); 
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -302,15 +302,15 @@ li.lower_left {
         -moz-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -moz-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -moz-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
-        -moz-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
+        -moz-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -o-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -o-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -o-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
-        -o-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
+        -o-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -webkit-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, #000000 15px),
         -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, #000000 15px);
-  background-position: bottom left, bottom right, top right, top left;;
+  background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
   background-size: 50% 50%;
