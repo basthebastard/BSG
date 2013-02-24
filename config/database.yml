@@ -35,5 +35,5 @@ production:
   pool: 5
   username: ebroot
   password: bearsrul3
-  hostname: aafmc1rgrf9wed.cxrviy7ysoot.eu-west-1.rds.amazonaws.com
+  host: aafmc1rgrf9wed.cxrviy7ysoot.eu-west-1.rds.amazonaws.com
   port: 3306
